@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="网络上的名人名言大多是假的。                    – 鲁迅">
+<meta name="description" content="以打靶为例，瞄相当于训练，打相当于测试偏差相当于瞄的准不准，方差相当于打的稳不稳在用训练集训练模型初期（欠拟合），模型对训练集有较高的错误率（瞄的不准，偏差高），而且在不同的测试集上表现近似（打的稳，方差小）；在用训练集训练模型后期（过拟合），模型对训练集都的错误率很小（瞄的准，偏差低），但在不同的测试集上表现与训练集相差较大（打的不稳，方差大）；在深度学习中，增加数据和正则化可以降低方差，减少过">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试">
-<meta property="og:url" content="http://yoursite.com/2017/08/20/测试/index.html">
+<meta property="og:title" content="直观理解机器学习中的偏差和方差">
+<meta property="og:url" content="http://yoursite.com/2017/09/17/直观理解机器学习中的偏差和方差/index.html">
 <meta property="og:site_name" content="Learn Life The Hard Way">
-<meta property="og:description" content="网络上的名人名言大多是假的。                    – 鲁迅">
+<meta property="og:description" content="以打靶为例，瞄相当于训练，打相当于测试偏差相当于瞄的准不准，方差相当于打的稳不稳在用训练集训练模型初期（欠拟合），模型对训练集有较高的错误率（瞄的不准，偏差高），而且在不同的测试集上表现近似（打的稳，方差小）；在用训练集训练模型后期（过拟合），模型对训练集都的错误率很小（瞄的准，偏差低），但在不同的测试集上表现与训练集相差较大（打的不稳，方差大）；在深度学习中，增加数据和正则化可以降低方差，减少过">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-20T10:54:38.904Z">
+<meta property="og:updated_time" content="2017-09-17T13:08:08.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试">
-<meta name="twitter:description" content="网络上的名人名言大多是假的。                    – 鲁迅">
+<meta name="twitter:title" content="直观理解机器学习中的偏差和方差">
+<meta name="twitter:description" content="以打靶为例，瞄相当于训练，打相当于测试偏差相当于瞄的准不准，方差相当于打的稳不稳在用训练集训练模型初期（欠拟合），模型对训练集有较高的错误率（瞄的不准，偏差高），而且在不同的测试集上表现近似（打的稳，方差小）；在用训练集训练模型后期（过拟合），模型对训练集都的错误率很小（瞄的准，偏差低），但在不同的测试集上表现与训练集相差较大（打的不稳，方差大）；在深度学习中，增加数据和正则化可以降低方差，减少过">
 
 
 
@@ -115,10 +115,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/20/测试/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/17/直观理解机器学习中的偏差和方差/"/>
 
 
-  <title> 测试 | Learn Life The Hard Way </title>
+  <title> 直观理解机器学习中的偏差和方差 | Learn Life The Hard Way </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -240,7 +240,7 @@
             
             
               
-                测试
+                直观理解机器学习中的偏差和方差
               
             
           </h1>
@@ -252,8 +252,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-08-20T18:52:59+08:00" content="2017-08-20">
-              2017-08-20
+            <time itemprop="dateCreated" datetime="2017-09-17T21:04:38+08:00" content="2017-09-17">
+              2017-09-17
             </time>
           </span>
 
@@ -280,7 +280,7 @@
       
 
       
-        <p>网络上的名人名言大多是假的。<br>                    – 鲁迅</p>
+        <p>以打靶为例，瞄相当于训练，打相当于测试<br>偏差相当于瞄的准不准，方差相当于打的稳不稳<br>在用训练集训练模型初期（欠拟合），模型对训练集有较高的错误率（瞄的不准，偏差高），而且在不同的测试集上表现近似（打的稳，方差小）；<br>在用训练集训练模型后期（过拟合），模型对训练集都的错误率很小（瞄的准，偏差低），但在不同的测试集上表现与训练集相差较大（打的不稳，方差大）；<br>在深度学习中，<br>增加数据和正则化可以降低方差，减少过拟合的发生；<br>增大网络深度和增加训练时间可以降低偏差，减少欠拟合的发生；<br>数据越多就越能覆盖真实数据的分布，试想下如果有现实世界中全部已存在和未存在的数据进行训练，就没有过拟合的问题了，因为任何一个数据的特点都被模型学到了；正则化可以一定程度上阻止过度学习训练集数据的分布特点，因为训练集的数据分布特点与现实世界真实的全部数据分布肯定是有一定误差的，所以过度学习训练集并不是好事。<br>而当我们假设训练集与现实世界真实的全部数据集数据分布特点一致时，增大网络深度和增加训练时间都可以使模型更复杂从而更好的学习到训练集（也是世界真实全部数据）的分布特点，从而时模型更加准确（偏差更小）。<br>正则化方法：<br>L2范数当惩罚系数增大时学到的大部分w都会偏小，其对应的神经元影响会减弱，假设弱到一定程度比神经元可以忽略，就相当于得到了一个深度不变但每层神经元减少的新网络，即降低了网络的复杂度。另外此时，当w偏小时计算出的z=wa也是偏小的，假设所有的w都极小，故每层z是位于0附近左右的极小值，此时对于激活函数sigmod和tanh在0极小附近的函数变化近似于斜率为1的直线，即使用二者激活函数计算出来的值都维持了线性特点，所以最后一层得到的结果只是输入值的线性组合而已，相当于降低了网络的复杂度。<br>dropout:直接关闭某些神经元的方式相当于构造了一个每层神经元更少的网络<br>early stopping:开始时训练集和测试集的代价函数一起减少，当到一定程度测试集的代价函数开始上升，此时方差开始增大，相当于开始过拟合了，可以尝试停止训练。</p>
 
       
     </div>
@@ -327,12 +327,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/08/26/win7-GTX1060配置及运行TensorFlow/" rel="next" title="win7+GTX1060配置及运行TensorFlow">
+                <i class="fa fa-chevron-left"></i> win7+GTX1060配置及运行TensorFlow
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/26/win7-GTX1060配置及运行TensorFlow/" rel="prev" title="win7+GTX1060配置及运行TensorFlow">
-                win7+GTX1060配置及运行TensorFlow <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/17/从头到尾用Python实现一个深度神经网络/" rel="prev" title="从头到尾用Python实现一个深度神经网络">
+                从头到尾用Python实现一个深度神经网络 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

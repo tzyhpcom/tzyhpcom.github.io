@@ -239,6 +239,193 @@
             
               
                 
+                <a class="post-title-link" href="/2017/09/17/从头到尾用Python实现一个深度神经网络/" itemprop="url">
+                  从头到尾用Python实现一个深度神经网络
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-09-17T21:10:38+08:00" content="2017-09-17">
+              2017-09-17
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">from sklearn.datasets import make_classification</div><div class="line">from sklearn import preprocessing</div><div class="line">import numpy as np</div><div class="line">import math</div><div class="line">from matplotlib import pyplot as plt</div><div class="line">from copy import deepcopy</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">def ReLu(X):</div><div class="line">    return X*(X&gt;0)</div><div class="line"></div><div class="line">def dReLu(X):</div><div class="line">    return 1.*(X&gt;0)</div><div class="line"></div><div class="line">def Sigmod(X):</div><div class="line">    return 1.0/(1.0+np.exp(-X))</div><div class="line"></div><div class="line">def dSigmod(X):</div><div class="line">    return Sigmod(X)*(1-Sigmod(X))</div><div class="line"></div><div class="line">X, Y = make_classification(n_features=2, n_redundant=0, n_informative=2,</div><div class="line">                             n_clusters_per_class=1, n_samples=6000)</div><div class="line"></div><div class="line"></div><div class="line">X_train = X[0:int(X.shape[0]*0.7),:]</div><div class="line">Y_train = Y[0:int(X.shape[0]*0.7)]</div><div class="line">X_test = X[int(X.shape[0]*0.7):,:]</div><div class="line">Y_test = Y[int(X.shape[0]*0.7):]</div><div class="line"></div><div class="line">scaler = preprocessing.StandardScaler().fit(X_train)</div><div class="line">X_train = scaler.transform(X_train)</div><div class="line">X_test = scaler.transform(X_test)</div><div class="line"></div><div class="line">X_train = X_train.T  # n*m 特征数*样本数</div><div class="line">Y_train = Y_train.reshape(1,Y_train.shape[0])</div><div class="line">X_test = X_test.T  # n*m</div><div class="line">Y_test = Y_test.reshape(1,Y_test.shape[0])</div><div class="line"></div><div class="line">X = X.T</div><div class="line"></div><div class="line"></div><div class="line"># 构造神经网络</div><div class="line"># superparam</div><div class="line">m = X_train.shape[1]</div><div class="line"></div><div class="line">n = [X_train.shape[0],8,4,2,1]  # 各层神经元数量, 包含第一层输入层</div><div class="line">f = [0, ReLu, ReLu, ReLu, Sigmod]  # 各隐层激活函数, 第一个0为占位</div><div class="line">df = [0, dReLu, dReLu, dReLu, dSigmod]  # 各隐层激活函数求导, 第一个0为占位</div><div class="line"># n = [X_train.shape[0],1]  # 各层神经元数量, 包含第一层输入层</div><div class="line"># f = [0, Sigmod]  # 各隐层激活函数, 第一个0为占位</div><div class="line"># df = [0, dSigmod]  # 各隐层激活函数求导, 第一个0为占位</div><div class="line"></div><div class="line"></div><div class="line">layers = len(n)-1</div><div class="line"># param</div><div class="line">W = [0 for i in range(len(n))]  # 第一个0补位，为了让W[i]对应第i层参数</div><div class="line">b = [0 for i in range(len(n))]</div><div class="line">for l in range(1, len(n)):</div><div class="line">    W[l] = np.random.randn(n[l],n[l-1])*np.sqrt(2.0/n[l-1])  # 为了避免梯度消失和梯度爆炸问题*np.sqrt(1.0/n[l-1]），对于ReLu2.0更好</div><div class="line">    b[l] = np.random.randn(n[l],1)</div><div class="line"></div><div class="line">#构造中间值</div><div class="line">Z = [0 for i in range(len(n))]</div><div class="line">A = [0 for i in range(len(n))]</div><div class="line">dZ = [0 for i in range(len(n))]</div><div class="line">dA = [0 for i in range(len(n))]</div><div class="line">dW = [0 for i in range(len(n))]</div><div class="line">db = [0 for i in range(len(n))]</div><div class="line"></div><div class="line"></div><div class="line"># 迭代</div><div class="line"># super param</div><div class="line">rate = 0.01</div><div class="line">iteration = 5000</div><div class="line">lambd = 0.01</div><div class="line"></div><div class="line"></div><div class="line"># for graph</div><div class="line">loss_train = []</div><div class="line">loss_test = []</div><div class="line">accuracy_train = 0</div><div class="line">accuracy_test = 0</div><div class="line"></div><div class="line"># if debug, grad check</div><div class="line">debug = False</div><div class="line">epsilon  = 0.00001</div><div class="line"></div><div class="line">for i in range(iteration):</div><div class="line">    i += 1</div><div class="line">    # forward</div><div class="line">    Z[0] = X_train</div><div class="line">    A[0] = X_train</div><div class="line">    for l in range(1, len(n)):</div><div class="line">        Z[l] = np.dot(W[l], A[l-1]) + b[l]</div><div class="line">        A[l] = f[l](Z[l])  </div><div class="line">    assert(A[layers].shape == (n[layers],m))</div><div class="line">    assert(True not in (A[layers]&lt;0)[:])</div><div class="line">    l2_norm = sum([np.sum(w**2) for w in W])*lambd/(2.0*m)</div><div class="line">    J_train = -(np.dot(np.log(A[layers]),Y_train.T)+np.dot(np.log(1-A[layers]),(1-Y_train).T))/m + l2_norm  # add l2_norm , it only affect dW[l]</div><div class="line">    # predict train</div><div class="line">    Y_pred = 1*(A[layers]&gt;0.5)</div><div class="line">    accuracy_train = (Y_pred == Y_train).mean()</div><div class="line">#     print(J)</div><div class="line"></div><div class="line">    # backward</div><div class="line">    dA[layers] = -Y_train/A[layers] + (1-Y_train)/(1-A[layers])  # end layer</div><div class="line">    for l in range(len(n)-1, 0, -1):</div><div class="line">        dZ[l] = dA[l]*df[l](Z[l])  # after calcute, it is  dZ2 = A2-Y_train</div><div class="line">        assert(dZ[l].shape == Z[l].shape)</div><div class="line">        dW[l] = np.dot(dZ[l], A[l-1].T)/m +lambd*W[l]/m</div><div class="line">        assert(dW[l].shape == W[l].shape)</div><div class="line">        db[l] = np.sum(dZ[l], axis=1, keepdims=True)/m</div><div class="line">        assert(db[l].shape == b[l].shape)</div><div class="line">        dA[l-1] = np.dot(W[l].T,dZ[l])</div><div class="line"></div><div class="line">    # grad check </div><div class="line">    if debug:</div><div class="line">        W_big = deepcopy(W)</div><div class="line">        b_big = deepcopy(b)</div><div class="line">        W_small = deepcopy(W)</div><div class="line">        b_small = deepcopy(b)</div><div class="line">        dW_diff = deepcopy(W)</div><div class="line">        db_diff = deepcopy(b)</div><div class="line">        Z_big = deepcopy(Z)</div><div class="line">        A_big = deepcopy(A)</div><div class="line">        Z_small = deepcopy(Z)</div><div class="line">        A_small = deepcopy(A)</div><div class="line">        # flatten to vector</div><div class="line">        theta = np.array([])</div><div class="line">        dtheta = np.array([])  # store dW db for check</div><div class="line">        for l in range(1, len(n)):</div><div class="line">            theta = np.concatenate([theta,W[l].flatten()])</div><div class="line">            theta = np.concatenate([theta,b[l].flatten()])</div><div class="line">            dtheta = np.concatenate([dtheta,dW[l].flatten()])</div><div class="line">            dtheta = np.concatenate([dtheta,db[l].flatten()])</div><div class="line">        # calculate every theta</div><div class="line">        dtheta_debug = np.zeros(dtheta.shape)</div><div class="line">        for t in range(len(theta)):</div><div class="line">            # add or minus a little bit</div><div class="line">            theta_big = theta.copy()</div><div class="line">            theta_small = theta.copy()</div><div class="line">            theta_big[t] = theta[t] + epsilon </div><div class="line">            theta_small[t] = theta[t] - epsilon </div><div class="line">            node_cnt = 0</div><div class="line">            # resore big and mall of W b</div><div class="line">            for l in range(1, len(n)):</div><div class="line">                W_big[l] = theta_big[node_cnt:node_cnt+n[l]*n[l-1]].reshape((n[l],n[l-1]))</div><div class="line">                W_small[l] = theta_small[node_cnt:node_cnt+n[l]*n[l-1]].reshape((n[l],n[l-1]))</div><div class="line">                node_cnt = node_cnt+n[l]*n[l-1]</div><div class="line">                b_big[l] = theta_big[node_cnt:node_cnt+n[l]*1].reshape((n[l],1))</div><div class="line">                b_small[l] = theta_small[node_cnt:node_cnt+n[l]*1].reshape((n[l],1))</div><div class="line">                node_cnt = node_cnt+n[l]*1</div><div class="line">            # forward</div><div class="line">            Z_big[0] = X_train</div><div class="line">            A_big[0] = X_train</div><div class="line">            Z_small[0] = X_train</div><div class="line">            A_small[0] = X_train</div><div class="line">            for l in range(1, len(n)):</div><div class="line">                Z_big[l] = np.dot(W_big[l], A_big[l-1]) + b_big[l]</div><div class="line">                A_big[l] = f[l](Z_big[l])</div><div class="line">                Z_small[l] = np.dot(W_small[l], A_small[l-1]) + b_small[l]</div><div class="line">                A_small[l] = f[l](Z_small[l])</div><div class="line">            l2_norm_big = sum([np.sum(w**2) for w in W_big])*lambd/(2.0*m)</div><div class="line">            J_train_big = -(np.dot(np.log(A_big[layers]),Y_train.T)+np.dot(np.log(1-A_big[layers]),(1-Y_train).T))/m + l2_norm_big</div><div class="line">            l2_norm_small = sum([np.sum(w**2) for w in W_small])*lambd/(2.0*m)</div><div class="line">            J_train_small = -(np.dot(np.log(A_small[layers]),Y_train.T)+np.dot(np.log(1-A_small[layers]),(1-Y_train).T))/m + l2_norm_small</div><div class="line">            dtheta_debug[t] = (J_train_big-J_train_small)/(2.0*epsilon )</div><div class="line">        d_diff = dtheta - dtheta_debug</div><div class="line">        node_cnt = 0</div><div class="line">        # restore to dw and db</div><div class="line">        for l in range(1, len(n)):</div><div class="line">            dW_diff[l] = d_diff[node_cnt:node_cnt+n[l]*n[l-1]].reshape((n[l],n[l-1]))</div><div class="line">            node_cnt = node_cnt+n[l]*n[l-1]</div><div class="line">            db_diff[l] = d_diff[node_cnt:node_cnt+n[l]*1].reshape((n[l],1))</div><div class="line">            node_cnt = node_cnt+n[l]*1</div><div class="line">        grad_diff = np.sqrt(np.sum((dtheta-dtheta_debug)**2))/(np.sqrt(np.sum(dtheta**2))+np.sqrt(np.sum(dtheta_debug**2)))</div><div class="line">#         print(&quot;dtheta diff: %f&quot; % grad_diff)</div><div class="line">            </div><div class="line">    # gradient</div><div class="line">    for l in range(len(n)-1, 0, -1):             </div><div class="line">        W[l] -= rate*dW[l]</div><div class="line">        b[l] -= rate*db[l]</div><div class="line"></div><div class="line">#     print(&quot;Iteration %d Loss: %lf&quot; % (i, J))</div><div class="line"></div><div class="line">    # predict    </div><div class="line">    A_tmp = X_test</div><div class="line">    for l in range(1, len(n)):</div><div class="line">        Z_tmp = np.dot(W[l], A_tmp) + b[l]</div><div class="line">        A_tmp = f[l](Z_tmp)</div><div class="line">    J_test = -(np.dot(np.log(A_tmp),Y_test.T)+np.dot(np.log(1-A_tmp),(1-Y_test).T))/X_test.shape[1]</div><div class="line">    Y_pred = 1*(A_tmp&gt;0.5)</div><div class="line">    accuracy_test = (Y_pred == Y_test).mean()</div><div class="line">    </div><div class="line">    # save loss</div><div class="line">    loss_train.append(J_train[0][0])</div><div class="line">    loss_test.append(J_test[0][0])</div><div class="line">    </div><div class="line"># final accuracy</div><div class="line">print(&quot;accuracy_train: %lf&quot; % accuracy_train)</div><div class="line">print(&quot;accuracy_test: %lf&quot; % accuracy_test)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">plt.figure(num=0, figsize=(6, 8), dpi=80, facecolor=&apos;w&apos;, edgecolor=&apos;k&apos;)</div><div class="line">plt.plot(range(iteration), loss_train, c=&quot;blue&quot;)</div><div class="line">plt.plot(range(iteration), loss_test, c=&quot;red&quot;)</div><div class="line">plt.show()</div><div class="line"></div><div class="line"></div><div class="line">plt.figure(num=None, figsize=(6, 8), dpi=80, facecolor=&apos;w&apos;, edgecolor=&apos;k&apos;)</div><div class="line">plt.scatter(X[0], X[1], marker=&apos;o&apos;, c=Y, s=5, edgecolor=&apos;k&apos;)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/17/直观理解机器学习中的偏差和方差/" itemprop="url">
+                  直观理解机器学习中的偏差和方差
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-09-17T21:04:38+08:00" content="2017-09-17">
+              2017-09-17
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>以打靶为例，瞄相当于训练，打相当于测试<br>偏差相当于瞄的准不准，方差相当于打的稳不稳<br>在用训练集训练模型初期（欠拟合），模型对训练集有较高的错误率（瞄的不准，偏差高），而且在不同的测试集上表现近似（打的稳，方差小）；<br>在用训练集训练模型后期（过拟合），模型对训练集都的错误率很小（瞄的准，偏差低），但在不同的测试集上表现与训练集相差较大（打的不稳，方差大）；<br>在深度学习中，<br>增加数据和正则化可以降低方差，减少过拟合的发生；<br>增大网络深度和增加训练时间可以降低偏差，减少欠拟合的发生；<br>数据越多就越能覆盖真实数据的分布，试想下如果有现实世界中全部已存在和未存在的数据进行训练，就没有过拟合的问题了，因为任何一个数据的特点都被模型学到了；正则化可以一定程度上阻止过度学习训练集数据的分布特点，因为训练集的数据分布特点与现实世界真实的全部数据分布肯定是有一定误差的，所以过度学习训练集并不是好事。<br>而当我们假设训练集与现实世界真实的全部数据集数据分布特点一致时，增大网络深度和增加训练时间都可以使模型更复杂从而更好的学习到训练集（也是世界真实全部数据）的分布特点，从而时模型更加准确（偏差更小）。<br>正则化方法：<br>L2范数当惩罚系数增大时学到的大部分w都会偏小，其对应的神经元影响会减弱，假设弱到一定程度比神经元可以忽略，就相当于得到了一个深度不变但每层神经元减少的新网络，即降低了网络的复杂度。另外此时，当w偏小时计算出的z=wa也是偏小的，假设所有的w都极小，故每层z是位于0附近左右的极小值，此时对于激活函数sigmod和tanh在0极小附近的函数变化近似于斜率为1的直线，即使用二者激活函数计算出来的值都维持了线性特点，所以最后一层得到的结果只是输入值的线性组合而已，相当于降低了网络的复杂度。<br>dropout:直接关闭某些神经元的方式相当于构造了一个每层神经元更少的网络<br>early stopping:开始时训练集和测试集的代价函数一起减少，当到一定程度测试集的代价函数开始上升，此时方差开始增大，相当于开始过拟合了，可以尝试停止训练。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/08/26/win7-GTX1060配置及运行TensorFlow/" itemprop="url">
                   win7+GTX1060配置及运行TensorFlow
                 </a>
@@ -475,7 +662,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
